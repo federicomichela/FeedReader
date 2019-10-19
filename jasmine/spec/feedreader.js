@@ -42,6 +42,11 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+         it('should have name', () => {
+             let allFeedNames = allFeeds.map(feed => feed.name);
+
+             expect(allFeedNames.every(name => Boolean(name))).toBe(true);
+         });
     });
 
 
