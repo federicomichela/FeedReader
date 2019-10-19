@@ -31,6 +31,11 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
+         it('should have url', () => {
+             let allFeedUrls = allFeeds.map(feed => feed.url);
+
+             expect(allFeedUrls.every(feed => Boolean(feed))).toBe(true);
+         });
 
 
         /* TODO: Write a test that loops through each feed
