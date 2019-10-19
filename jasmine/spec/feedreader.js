@@ -68,6 +68,16 @@ $(function() {
          * should have two expectations: does the menu display when
          * clicked and does it hide when clicked again.
          */
+         it('shuld show and hide sidebar menu when menu icon clicked', () => {
+            let menuIcon = document.querySelector('.menu-icon-link');
+            let body = document.querySelector('body');
+
+            menuIcon.click();
+            expect(body.classList.contains('menu-hidden')).not.toBe(true);
+
+            menuIcon.click();
+            expect(body.classList.contains('menu-hidden')).toBe(true);
+         });
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
